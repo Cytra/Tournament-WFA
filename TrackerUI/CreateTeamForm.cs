@@ -17,11 +17,12 @@ namespace TrackerUI
 
         private List<PersonModel> availableTeamMember = GlobalConfig.Connection.GetPersonAll();
         private List<PersonModel> selectedTeammembers = new List<PersonModel>();
+        private ITeamRequester callingForm;
 
-        public CreateTeamForm()
+        public CreateTeamForm(ITeamRequester caller)
         {
             InitializeComponent();
-            //CreateSampleData();
+            callingForm = caller;
             WireUpList();
 
         }
@@ -37,10 +38,10 @@ namespace TrackerUI
 
         private void WireUpList()
         {
-            selectTeamMemberDropDown.DataSource = null;
+            selectopDown.DataSource = null;
 
-            selectTeamMemberDropDown.DataSource = availableTeamMember;
-            selectTeamMemberDropDown.DisplayMember = "FullName";
+            selectopDown.DataSource = availableTeamMember;
+            selectopDown.DisplayMember = "FullName";
 
             teamMemberListBox.DataSource = null;
 
@@ -60,7 +61,9 @@ namespace TrackerUI
                 p.EmailAddress = EmailValue.Text;
                 p.CellphoneNumber = cellphoneValue.Text;
 
-                GlobalConfig.Connection.CreatePerson(p);
+                p = GlobalConfig.Connection.CreatePerson(p);
+                selectedTeammembers.Add(p);
+                WireUpList();
 
                 firstNameValue.Text = "";
                 lastNameValue.Text = "";
@@ -100,7 +103,7 @@ namespace TrackerUI
 
         private void addTeamMemberButton_Click(object sender, EventArgs e)
         {
-            PersonModel p = (PersonModel) selectTeamMemberDropDown.SelectedItem;
+            PersonModel p = (PersonModel) selectopDown.SelectedItem;
 
 
             if (p != null)
@@ -121,6 +124,17 @@ namespace TrackerUI
                 availableTeamMember.Add(p);
                 WireUpList();
             }
+        }
+
+        private void CreateTeamButton_Click(object sender, EventArgs e)
+        {
+            TeamModel t = new TeamModel();
+            t.TeamName = teamNameValue.Text;
+            t.TeamMembers = selectedTeammembers;
+            GlobalConfig.Connection.CreateTeam(t);
+
+            callingForm.TeamComplete(t);
+            this.Close();
         }
     }
 }
