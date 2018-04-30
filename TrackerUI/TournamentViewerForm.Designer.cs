@@ -88,6 +88,7 @@
             this.roundDropDown.Name = "roundDropDown";
             this.roundDropDown.Size = new System.Drawing.Size(233, 38);
             this.roundDropDown.TabIndex = 3;
+            this.roundDropDown.SelectedIndexChanged += new System.EventHandler(this.roundDropDown_SelectedIndexChanged);
             // 
             // UnplayedOnlyCheckBox
             // 
@@ -102,6 +103,7 @@
             this.UnplayedOnlyCheckBox.Text = "Unplayed Only";
             this.UnplayedOnlyCheckBox.UseCompatibleTextRendering = true;
             this.UnplayedOnlyCheckBox.UseVisualStyleBackColor = true;
+            this.UnplayedOnlyCheckBox.CheckedChanged += new System.EventHandler(this.UnplayedOnlyCheckBox_CheckedChanged);
             // 
             // matchupListBox
             // 
@@ -112,6 +114,7 @@
             this.matchupListBox.Name = "matchupListBox";
             this.matchupListBox.Size = new System.Drawing.Size(327, 242);
             this.matchupListBox.TabIndex = 5;
+            this.matchupListBox.SelectedIndexChanged += new System.EventHandler(this.matchupListBox_SelectedIndexChanged);
             // 
             // teamOneName
             // 
@@ -196,6 +199,7 @@
             this.scoreButton.TabIndex = 13;
             this.scoreButton.Text = "Score";
             this.scoreButton.UseVisualStyleBackColor = true;
+            this.scoreButton.Click += new System.EventHandler(this.scoreButton_Click);
             // 
             // TournamentViewerForm
             // 

@@ -70,6 +70,11 @@ namespace TrackerLibrary.DataAccess
             tournaments.SaveToTournamentsFile(TournamentFile);
         }
 
+        public void UpdateMatchup(MatchupModel model)
+        {
+            model.UpdateMatchupToFile();
+        }
+
         public List<PersonModel> GetPersonAll()
         {
             return PeopleFile.FullFilePath().LoadFile().ConvertToPersonModel();

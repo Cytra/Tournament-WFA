@@ -48,7 +48,3 @@ C:\Users\bc1729\Desktop\Personal\C Sharp Projects\Tournament-WFA\TrackerUI\obj\D
 C:\Users\bc1729\Desktop\Personal\C Sharp Projects\Tournament-WFA\TrackerUI\obj\Debug\TrackerUI.csproj.GenerateResource.Cache
 C:\Users\bc1729\Desktop\Personal\C Sharp Projects\Tournament-WFA\TrackerUI\obj\Debug\TrackerUI.exe
 C:\Users\bc1729\Desktop\Personal\C Sharp Projects\Tournament-WFA\TrackerUI\obj\Debug\TrackerUI.pdb
-C:\Users\bc1729\Desktop\Personal\C Sharp Projects\Tournament-WFA\TrackerUI\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\bc1729\Desktop\Personal\C Sharp Projects\Tournament-WFA\TrackerUI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\bc1729\Desktop\Personal\C Sharp Projects\Tournament-WFA\TrackerUI\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\bc1729\Desktop\Personal\C Sharp Projects\Tournament-WFA\TrackerUI\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll

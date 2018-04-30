@@ -57,6 +57,11 @@ namespace TrackerLibrary.DataAccess
             throw new NotImplementedException();
         }
 
+        public void UpdateMatchup(MatchupModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<PersonModel> GetPersonAll()
         {
             throw new NotImplementedException();
