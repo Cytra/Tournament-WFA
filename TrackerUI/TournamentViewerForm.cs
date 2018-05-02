@@ -220,8 +220,8 @@ namespace TrackerUI
                 foreach (var rm in round)
                 {
                     foreach (var me in rm.Entries)
-                    {
                         if (me.ParentMatchup != null)
+                    {
                         {
                             if (me.ParentMatchup.Id == m.Id)
                             {
